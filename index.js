@@ -6,17 +6,10 @@ const morgan = require("morgan");
 const cookieSession = require("express-session");
 const passport = require("passport");
 const apiRoute = require("./routes/api.route");
-const { corsOptions } = require("./services/cors.service");
 const app = express();
 require("./passport.js");
 //Middlesware
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "https://staging.mooreexotics.com"],
-    methods: "GET,POST,PATCH,PUT,DELETE",
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(
   cookieSession({
