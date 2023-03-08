@@ -58,8 +58,8 @@ module.exports = {
               }
           );
       }));
-      sendSuccess(res, 'Sort order updated.', {});
-      
+      sendSuccess(res, 'Fields updated.', {});
+
     } catch (error) {
       sendCatchedError(res, '', error, {});
     }
